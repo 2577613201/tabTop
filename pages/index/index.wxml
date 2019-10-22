@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" class="page">
+
+  <scroll-view scroll-x="true" style='width: 100%; white-space:nowrap; position:fixed;z-index:2;background:#fff;'>
+
+      <view class="tabNavBox" >
+      <view class="tabNav">
+         <view wx:for="{{products}}" wx:key="{{index}}" bindtap="setTab" data-tabindex="{{index}}" data-tabitem="{{item}}"  style="min-width:20%;max-width:20%;text-align:center;height: 80rpx;background: #fff;color:{{index==currentTab?'#FF7E00':'#333'}};border-bottom:{{index>4?'1rpx solid #ddd;':''}} ">{{item.title}}</view>
+         <view>
+             <view class="line" style="width:{{100/tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+         </view>
+      </view>
+      </view>
+      </scroll-view>
+
+     <swiper current="{{currentTab}}"  class="swiper-box" duration="300" class="swiper" style="background:#eee;height:100%;  position:relative; z-index:1;top:85rpx;" bindchange="bindChange">
+      <swiper-item class="center_head_list content" wx:for="{{products}}" style="overflow:scroll" wx:key="{{index}}">
+        <view class='center_cont'>
+          <text>{{index}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+
+  </scroll-view>

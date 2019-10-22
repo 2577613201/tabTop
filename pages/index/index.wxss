@@ -1,0 +1,54 @@
+/**index.wxss**/
+.page{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.tabNavBox {
+  display: flex;
+  flex-direction: column;
+}
+.tabNav {
+border-bottom: 1rpx solid #ddd;
+width: 100%;
+height: 80rpx;
+display: flex;
+line-height: 80rpx;
+position: relative;
+}
+.line {
+position: absolute;
+left: 0;
+bottom: -1rpx;
+height: 4rpx;
+background: #FF7E00;
+transition: all 0.3s;
+}
+.tab-content {
+flex: 1;
+overflow-y: auto;
+overflow-x: hidden;
+}
+/*选项卡页面联动切换*/
+.swiper-tab {
+width: 100%;
+border-bottom: 2rpx solid #777;
+text-align: center;
+line-height: 80rpx;
+}
+.swiper-tab-list {
+font-size: 30rpx;
+display: inline-block;
+width: 33.33%;
+color: #777;
+}
+.on {
+color: #da7c0c;
+border-bottom: 1rpx solid #da7c0c;
+}
+.swiper-box {
+display: block;
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
