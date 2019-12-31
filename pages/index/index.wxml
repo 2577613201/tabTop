@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <scroll-view scroll-y="true" class="page">
 
-  <scroll-view scroll-x="true" style='width: 100%; white-space:nowrap; position:fixed;z-index:2;background:#fff;'>
+  <scroll-view scroll-x="true" scroll-left="{{scroll_left}}" style='width: 100%; white-space:nowrap; position:fixed;z-index:2;background:#fff;'>
 
       <view class="tabNavBox" >
       <view class="tabNav">
@@ -16,7 +16,7 @@
      <swiper current="{{currentTab}}"  class="swiper-box" duration="300" class="swiper" style="background:#eee;height:100%;  position:relative; z-index:1;top:85rpx;" bindchange="bindChange">
       <swiper-item class="center_head_list content" wx:for="{{products}}" style="overflow:scroll" wx:key="{{index}}">
         <view class='center_cont'>
-          <text>{{index}}</text>
+          <text>{{index+1}}</text>
         </view>
       </swiper-item>
     </swiper>

@@ -8,7 +8,8 @@ Page({
     tabnum: 5,   //一行显示多少个
     // tab切换
     currentTab: 0,
-    products: [{ title: '选项一' }, { title: '选项二' },{ title: '选项三' }, { title: '选项四' }]
+    scroll_left:'',
+    products: [{ title: '选项一' }, { title: '选项二' }, { title: '选项三' }, { title: '选项四' }, { title: '选项五' }, { title: '选项六' }, { title: '选项七' }, { title: '选项八' }, { title: '选项九' }, { title: '选项十' }, { title: '选项十一' }]
   },
  
   onLoad: function () {
@@ -38,9 +39,18 @@ Page({
     that.setData({
       currentTab: e.detail.current,
       showtab: e.detail.current,
-     
+      scroll_left: app.globalData.screenWidth / 5 * e.detail.current
     });
-
+    console.log(e.detail.current)
+    // if (e.detail.current>=4){
+    //   this.setData({
+    //     scroll_left: app.globalData.screenWidth / 5 * e.detail.current
+    //   })
+    // }else{
+    //   this.setData({
+    //     scroll_left: 0
+    //   })
+    // }
   },
 
 })
